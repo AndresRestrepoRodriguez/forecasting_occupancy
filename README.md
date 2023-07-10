@@ -224,17 +224,17 @@ python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.c
 
 The REST API was built with FastAPI by consuming the trained models in the *Saving the models* example. Additionally, the REST API was Dockerized and it can be deployed as follows:
 
-Crear la imagen
+Create the image
 ```
 docker build -t forecasting_occupancy:latest .
 ```
 
-Correr el imagen
+Run the image
 ```
 docker run -d -p 5000:5000 -t forecasting_occupancy:latest
 ```
 
-Test de API
+Test the REST API
 - Health check endpoint: Check if the api is working.
     ```
     curl --location 'http://<DOCKER-IP>:5000/health'

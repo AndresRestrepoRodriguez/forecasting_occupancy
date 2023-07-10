@@ -34,7 +34,7 @@ To give a solution to predict occupancy for the next 24h after a given timestamp
 The sample_solution.py script receives the following parameters:
 
 - '-i' or '--input_file': Input file path (Required)
-- '-t' or '--timestamp': Input timestamp in format 'YYYY-MM-DD H:m:s' (Required)
+- '-t' or '--timestamp': Input timestamp in format '%Y-%m-%d %H:%M:%S' (Required)
 - '-o' or '--output_file': Output file path (Required)
 - '-s' or '--save_models': To save or not the trained models. They will be stored in the models folder. Default is false. (true or false) (Not required)
 

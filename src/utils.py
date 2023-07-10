@@ -14,12 +14,7 @@ def filter_data_by_device(raw_data, device):
 
 
 def creating_date_range(start_date, end_date, time_frame):
-    """
-    :param start_date: datetime
-    :param end_date: datetime
-    :param time_frame: int
-    :return: datetime
-    """
+
     delta = timedelta(minutes=time_frame)
     while start_date < end_date:
         yield start_date
@@ -58,17 +53,9 @@ def get_ground_truth(complete_dataset, test_dates):
 
 
 def labelling_predictions(pred_data):
-    """
-    :param pred_data: dataframe
-    :rtype: dataframe
-    """
-    # getting mean value
     pred_mean = pred_data['pred'].mean()
-    # getting standard deviation
     pred_std = pred_data['pred'].std()
-    # finding z score
     pred_data['z_score'] = pred_data['pred'].apply(lambda row: round((row - pred_mean)/pred_std, 2))
-    # labelling the predictions
     pred_data['activation_predicted'] = pred_data['z_score'].apply(lambda row: 1 if row > 0 else 0)
     return pred_data[['time', 'activation_predicted']]
 

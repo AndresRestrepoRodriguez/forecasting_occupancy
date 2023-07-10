@@ -49,13 +49,13 @@ def predict_future_activation(data_dir, current_time, output_file, save_models=F
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser('Substitution Process')
-    parser.add_argument('-d', '--data_dir', type=str, required=True)
+    parser.add_argument('-i', '--input_file', type=str, required=True)
     parser.add_argument('-t', '--timestamp', type=str, required=True)
     parser.add_argument('-o', '--output_file', type=str, required=True)
     parser.add_argument('-s', '--save_models',  type=str, required=False, default='false')
 
     args = parser.parse_args()
-    data_dir = str(args.data_dir)
+    input_file = str(args.input_file)
     current_time = str(args.timestamp)
     output_file = str(args.output_file)
     save_models = str(args.save_models).lower()
@@ -63,10 +63,10 @@ if __name__ == "__main__":
     save_models_bool = True if save_models == 'true' else False
 
     if save_models_bool:
-        predict_future_activation(data_dir, current_time, output_file, save_models_bool)
+        predict_future_activation(input_file, current_time, output_file, save_models_bool)
     
     else:
-        predict_future_activation(data_dir, current_time, output_file)
+        predict_future_activation(input_file, current_time, output_file)
     
 
 

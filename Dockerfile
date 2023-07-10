@@ -1,6 +1,8 @@
 FROM python:3.8-slim
 
 RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get install -y sox libsndfile1 libsamplerate0-dev^M
+RUN apt-get update && apt-get install -y git make nasm pkg-config libx264-dev libxext-dev libxfixes-dev zlib1g-dev
 
 RUN apt-get --assume-yes install \
     git \
@@ -25,6 +27,6 @@ RUN pip install --no-cache-dir -r /code/requirements.txt
 
 COPY ./ /code
 
-EXPOSE 5050
+EXPOSE 5000
 
-CMD ["uvicorn", "api.main:app", "--host 0.0.0.0", "--port 5050"]
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "5000"]

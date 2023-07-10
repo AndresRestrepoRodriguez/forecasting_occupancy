@@ -29,6 +29,8 @@ To give a solution to predict occupancy for the next 24h after a given timestamp
 - Export the predictions obtained in a file with a CSV extension
 - Whether the evaluation metrics were obtained are displayed in the output of the script.
 
+Additionally, a short exploratory data analysis was previously performed. This is found in this [notebook](https://github.com/AndresRestrepoRodriguez/forecasting_occupancy/blob/main/EDA_Occupancy_forecasting.ipynb).
+
 ## Parameters
 
 The sample_solution.py script receives the following parameters:

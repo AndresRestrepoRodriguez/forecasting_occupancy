@@ -213,7 +213,7 @@ python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.c
 3) <b>Saving the models</b>
 
     ```
-    python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.csv -o data/predictions.csv -s true
+    python3 sample_solution.py -t '2022-08-31 23:59:59' -i data/device_activations.csv -o data/predictions.csv -s true
     ```
 
     These models that were saved in the models folder will be used in the prediction from an API.

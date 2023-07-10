@@ -53,7 +53,7 @@ source env/bin/activate
 
 Clone the repository
 ```
-git clone 
+git clone https://github.com/AndresRestrepoRodriguez/forecasting_occupancy.git
 ```
 
 Go to the repository folder
@@ -76,7 +76,7 @@ python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.c
 
     Es decir que seleccionamos 24 horas que no están en el dataset por lo tanto no se tiene el ground truth para obtener métricas.
     ```
-    python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.csv -o data/predictions.csv
+    python3 sample_solution.py -t '2022-08-31 23:59:59' -i data/device_activations.csv -o data/predictions.csv
     ```
     console output
     ```
@@ -99,7 +99,7 @@ python3 sample_solution.py -t '2023-08-31 23:59:59' -i data/device_activations.c
 
     Es decir que seleccionamos 24 horas que si están en el dataset por lo tanto se tiene el ground truth para obtener métricas.
     ```
-    python3 sample_solution.py -t '2023-08-29 23:59:59' -i data/device_activations.csv -o data/predictions.csv
+    python3 sample_solution.py -t '2022-08-29 23:59:59' -i data/device_activations.csv -o data/predictions.csv
     ```
     console output
     ```
@@ -231,7 +231,7 @@ docker build -t forecasting_occupancy:latest .
 
 Correr el imagen
 ```
-docker run -p 5000:5000 -t forecasting_occupancy:latest -d
+docker run -d -p 5000:5000 -t forecasting_occupancy:latest
 ```
 
 Test de API

@@ -239,12 +239,12 @@ docker run -d -p 5000:5000 -t forecasting_occupancy:latest
 Test the REST API
 - Health check endpoint: Check if the api is working.
     ```
-    curl --location 'http://<DOCKER-IP>:5000/health'
+    curl --location 'http://<DOCKER-IP>:5000/api/v1/health'
     ```
 
 - Prediction endpoint: Predict the next 24 hours from the time the request is made.
     ```
-    curl --location 'http://<DOCKER-IP>:5000/predict'
+    curl --location 'http://<DOCKER-IP>:5000/api/v1/predict'
     ```
 
 
